@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { getNames } from '../../store/NamesSlice';
 import { clearVillager } from '../../store/villagerSlice';
 
 export default function ({ names }) {
@@ -13,6 +14,7 @@ export default function ({ names }) {
     useEffect(() => {
         (async () => {
             dispatch(clearVillager());
+            dispatch(getNames());
             if (search) {
                 const res = [];
                 villagerNames.forEach(villager => {
