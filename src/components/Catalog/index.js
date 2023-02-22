@@ -24,16 +24,16 @@ export default function () {
         <>
             <div className='catalog'>
                 <div className='cat-sections'>
-                    <div className='cat-title name'>
+                    <div className='cat-title'>
                         Name
                     </div>
-                    <div className='cat-title species'>
+                    <div className='cat-title'>
                         Species
                     </div>
-                    <div className='cat-title gender'>
+                    <div className='cat-title'>
                         Gender
                     </div>
-                    <div className='cat-title personality'>
+                    <div className='cat-title'>
                         Personality
                     </div>
                 </div>
