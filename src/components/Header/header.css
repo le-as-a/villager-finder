@@ -1,1 +1,29 @@
+.nav {
+    width: 60vw;
+    max-width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
 
+.navtitle {
+    font-family: 'Mali', cursive;
+    font-size: 64px;
+    text-align: center;
+    margin: 2rem 0;
+    color: aliceblue;
+}
+
+.navlink {
+    font-size: xx-large;
+    text-decoration: none;
+    color:rgb(6, 111, 111);
+}
+
+.navlink:hover {
+    color: aliceblue;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
