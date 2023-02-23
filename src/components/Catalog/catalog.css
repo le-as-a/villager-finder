@@ -9,13 +9,10 @@
     border-radius: .75rem;
 }
 
-.cat-sections {
-    margin-top: 3rem;
-}
-
 .cat-sections, .cat-link {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     gap: 1rem;
 }
 

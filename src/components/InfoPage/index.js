@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getVillager } from '../../store/villagerSlice';
+import './info.css';
 
 export default function () {
     const { id } = useParams(); 
@@ -17,16 +18,18 @@ export default function () {
     return (
         <>
             {villager ? (
-                <div className='villager-card'>
-                    <img className='villager-image' src={villager.image} />
-                    <div className='villager-info'>
-                        <div className='villager-name'>{villager.name}</div>
-                        <div className='desc'>
-                            Birthday: {villager.birthday}<br />
-                            Personality: {villager.personality}<br />
-                            Gender: {villager.gender}<br />
-                            Species: {villager.species}<br />
-                            Hobby: {villager.hobby}<br />
+                <div className='vill-wrap'>
+                    <div className='villager-card'>
+                        <img className='villager-image' src={villager.image} />
+                        <div className='villager-info'>
+                            <div className='villager-name'>{villager.name} <img className='villager-icon' src={villager.icon} /></div>
+                            <div className='desc'>
+                                <div className='info'><div className='info-type'>Birthday:</div> {villager.birthday}</div>
+                                <div className='info'><div className='info-type'>Personality:</div> {villager.personality}</div>
+                                <div className='info'><div className='info-type'>Gender:</div> {villager.gender}</div>
+                                <div className='info'><div className='info-type'>Species:</div> {villager.species}</div>
+                                <div className='info'><div className='info-type'>Hobby:</div> {villager.hobby}</div>
+                            </div>
                         </div>
                     </div>
                 </div>

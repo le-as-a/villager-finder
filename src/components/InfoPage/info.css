@@ -1,0 +1,55 @@
+.vill-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.villager-card {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: aliceblue;
+    align-items: center;
+    padding: .5rem;
+    border-radius: 1rem;
+    color: rgb(6, 111, 111);
+    border: 3px solid rgb(6, 111, 111);
+}
+
+.villager-image {
+    border-radius: 1.75rem;
+    border: 2px solid rgb(6, 111, 111);
+}
+
+.villager-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.villager-name {
+    font-family: 'Mali', cursive;
+    font-size: 48px;
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    flex-direction: row;
+    font-size: x-large;
+    align-items: center;
+}
+
+.info-type {
+    margin: .5rem 1rem;
+    font-size: x-large;
+    font-family: 'Mali', cursive;
+}
+
+.villager-icon {
+    height: 50px;
+    margin-left: 1rem;
+}
