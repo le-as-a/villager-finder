@@ -4,6 +4,8 @@
     justify-content: center;
     width: 60vw;
     max-width: 60vw;
+    max-height: 60vh;
+    overflow-y: scroll;
 }
 
 .cat-sections, .cat-link {

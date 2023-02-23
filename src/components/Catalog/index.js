@@ -9,6 +9,12 @@ export default function () {
     const dispatch = useDispatch();
     const catalog = useSelector(state => state.catalog);
     const [loaded, setLoaded] = useState(false);
+    catalog.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        else if (a.name > b.name) return 1;
+        else return 0;
+    });
+    console.log(catalog)
 
     useEffect(() => {
         (async () => {
@@ -22,21 +28,21 @@ export default function () {
 
     return (
         <>
-            <div className='catalog'>
-                <div className='cat-sections'>
-                    <div className='cat-title'>
-                        Name
-                    </div>
-                    <div className='cat-title'>
-                        Species
-                    </div>
-                    <div className='cat-title'>
-                        Gender
-                    </div>
-                    <div className='cat-title'>
-                        Personality
-                    </div>
+            <div className='cat-sections'>
+                <div className='cat-title'>
+                    Name
                 </div>
+                <div className='cat-title'>
+                    Species
+                </div>
+                <div className='cat-title'>
+                    Gender
+                </div>
+                <div className='cat-title'>
+                    Personality
+                </div>
+            </div>
+            <div className='catalog'>
                 {catalog ? catalog.map(item => (
                     <>
                         <Link className='cat-link' key={item.fn} to={`/catalog/${item.fn}`}>
