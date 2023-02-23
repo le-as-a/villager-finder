@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getNames } from '../../store/NamesSlice';
 import { clearVillager } from '../../store/villagerSlice';
+import './main.css';
 
 export default function ({ names }) {
     const dispatch = useDispatch();
@@ -30,6 +31,7 @@ export default function ({ names }) {
     return (
         <>
             <div className='main'>
+                <img className='graphic' src='https://i.imgur.com/xX4azBR.png' />
                 <input 
                     className='search'
                     placeholder='Name a villager...'
@@ -46,7 +48,7 @@ export default function ({ names }) {
                             })}
                         </div>
                     </>
-                ) : 0}
+                ) : <></>}
             </div>
         </>
     )
