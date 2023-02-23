@@ -21,7 +21,12 @@ export const getCatalog = createAsyncThunk(
                     icon: obj['icon_uri']
                 });
             }
-            return catalog;
+            const byName = catalog.sort(function (a, b) {
+                if (a.name < b.name) return -1;
+                if (a.name > b.name) return 1;
+                return 0;
+            });
+            return byName;
         }
     }
 )

@@ -5,5 +5,6 @@ body {
   justify-content: center;
   align-items: center;
   font-family: 'Neucha', cursive;
-  background: url('https://i.imgur.com/Bj7WsEU.jpg')
+  background: url('https://i.imgur.com/Bj7WsEU.jpg') no-repeat fixed;
+  background-size: cover;
 }

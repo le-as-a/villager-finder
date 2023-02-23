@@ -31,7 +31,7 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Main names={names} />} />
-        <Route path='/catalog' element={<Catalog />} />
+        <Route path='/catalog' element={<Catalog />} loader={dispatch(getCatalog())} />
         <Route path='/catalog/:id' element={<InfoPage />} />
         <Route path='*' element={<Default />} />
       </Routes>

@@ -1,25 +1,34 @@
 .catalog {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     width: 60vw;
-    max-width: 60vw;
+    margin-top: 2rem;
     max-height: 60vh;
     overflow-y: scroll;
+    border-radius: .75rem;
+}
+
+.cat-sections {
+    margin-top: 3rem;
 }
 
 .cat-sections, .cat-link {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
 }
 
 .cat-link {
     padding: .5rem .75rem;
-    background-color: aqua;
+    background-color: aliceblue;
+    text-decoration: none;
+    color: rgb(6, 111, 111);
 }
 
 .cat-link:hover {
-    background-color: blue;
+    background-color: rgb(6, 111, 111);
+    color: aliceblue;
 }
 
 .cat-title, .cat {
@@ -31,6 +40,11 @@
 .cat-title {
     font-family: 'Mali', cursive;
     font-size: xx-large;
+    color: aliceblue;
+    padding-left: 1rem;
+    padding-bottom: .5rem;
+    border-radius: .5rem;
+    border: solid 2px rgb(6, 111, 111);
 }
 
 .cat {
