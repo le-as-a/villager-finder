@@ -17,7 +17,7 @@ export const authenticate = createAsyncThunk(
 
 export const login = createAsyncThunk(
     'user/LOGIN',
-    async (email, pw) => {
+    async (email, password) => {
         const res = await fetch('/api/auth/login', {
             method: 'POST',
             headers: {

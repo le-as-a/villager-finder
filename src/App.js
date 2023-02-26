@@ -10,6 +10,8 @@ import Catalog from './components/Catalog';
 import { getNames } from './store/NamesSlice';
 import { getCatalog } from './store/catalogSlice';
 import Default from './components/Default';
+import Login from './components/Login';
+import Inventory from './components/Inventory';
 
 function App() {
   const dispatch = useDispatch();
@@ -33,6 +35,8 @@ function App() {
         <Route path='/' element={<Main names={names} />} />
         <Route path='/catalog' element={<Catalog />} loader={dispatch(getCatalog())} />
         <Route path='/catalog/:id' element={<InfoPage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/inventory' element={<Inventory />} />
         <Route path='*' element={<Default />} />
       </Routes>
     </Router>

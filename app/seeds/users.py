@@ -1,4 +1,5 @@
 from app.models import db, User
+from sqlalchemy.sql import text
 
 def seed_users():
     demo = User(username='demo', email='demo@aa.io', password='password')
@@ -6,5 +7,5 @@ def seed_users():
     db.session.commit()
 
 def undo_users():
-    db.session.execute('TRUNCATE users RESTART IDENTITY CASCADE;')
+    db.session.execute(text('TRUNCATE users RESTART IDENTITY CASCADE;'))
     db.session.commit()

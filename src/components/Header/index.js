@@ -12,7 +12,7 @@ export default function () {
                 <Link className='navlink' to='/'>Home</Link>
                 <Link className='navlink' to='/catalog'>Catalog</Link>
                 <Link className='navlink' to='/about'>About</Link>
-                <Link className='navlink' to='/demo'>Demo</Link>
+                <Link className='navlink' to='/login'>Login</Link>
             </div>
         </>
     )
