@@ -16,6 +16,8 @@ connection = psycopg2.connect(url)
 from .models import db, User
 from .config import Config
 from .seeds import seed_commands
+from .api.auth import auth_routes
+from .api.user import user_routes
 
 login = LoginManager(app)
 login.login_view = 'auth.unauthorized'
@@ -26,6 +28,8 @@ def load_user(id):
 
 app.config.from_object(Config)
 app.cli.add_command(seed_commands)
+app.register_blueprint(auth_routes, url_prefix='/api/auth')
+app.register_blueprint(user_routes, url_prefix='/api/users')
 
 db.init_app(app)
 Migrate(app, db)
