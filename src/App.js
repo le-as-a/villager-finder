@@ -35,8 +35,8 @@ function App() {
         <Route path='/' element={<Main names={names} />} />
         <Route path='/catalog' element={<Catalog />} loader={dispatch(getCatalog())} />
         <Route path='/catalog/:id' element={<InfoPage />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/inventory' element={<Inventory />} />
+        {/* <Route path='/login' element={<Login />} /> */}
+        {/* <Route path='/inventory' element={<Inventory />} /> */}
         <Route path='*' element={<Default />} />
       </Routes>
     </Router>
