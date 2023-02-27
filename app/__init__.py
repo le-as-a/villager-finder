@@ -13,8 +13,11 @@ app = Flask(__name__)
 url = os.environ.get("DATABASE_URL")
 connection = psycopg2.connect(url)
 
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL').replace('postgres://', 'postgresql://')
+app.config['SQLALCHEMY_ECHO'] = True
+
 from .models import db, User
-from .config import Config
 from .seeds import seed_commands
 from .api.auth import auth_routes
 from .api.user import user_routes
@@ -26,7 +29,6 @@ login.login_view = 'auth.unauthorized'
 def load_user(id):
     return User.query.get(int(id))
 
-app.config.from_object(Config)
 app.cli.add_command(seed_commands)
 app.register_blueprint(auth_routes, url_prefix='/api/auth')
 app.register_blueprint(user_routes, url_prefix='/api/users')
