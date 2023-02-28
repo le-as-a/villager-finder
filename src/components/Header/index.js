@@ -4,7 +4,7 @@ import './header.css';
 
 export default function () {
     return (
-        <>
+        <div className='header-container'>
             <div className='navtitle'>
                 ACNH: Villager Finder
             </div>
@@ -14,6 +14,6 @@ export default function () {
                 <Link className='navlink' to='/about'>About</Link>
                 <Link className='navlink' to='/login'>Login</Link>
             </div>
-        </>
+        </div>
     )
 }

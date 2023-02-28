@@ -12,6 +12,7 @@ import { getCatalog } from './store/catalogSlice';
 import Default from './components/Default';
 import Login from './components/Login';
 import Inventory from './components/Inventory';
+import About from './components/About';
 
 function App() {
   const dispatch = useDispatch();
@@ -37,6 +38,7 @@ function App() {
         <Route path='/catalog/:id' element={<InfoPage />} />
         {/* <Route path='/login' element={<Login />} /> */}
         {/* <Route path='/inventory' element={<Inventory />} /> */}
+        <Route path='/about' element={<About />} />
         <Route path='*' element={<Default />} />
       </Routes>
     </Router>
